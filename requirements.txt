@@ -2,3 +2,4 @@ flask
 reportlab
 datetime
 PyPDF2
+gunicorn
