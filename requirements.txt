@@ -1,6 +1,5 @@
 flask
 reportlab
 datetime
-io
 PyPDF2
 os
