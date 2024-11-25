@@ -1,0 +1,45 @@
+/* General Styling */
+h1,
+h2,
+h4,
+p {
+  font-family: "Arvo", serif;
+}
+
+p {
+  font-size: 17px;
+}
+
+/* Introduction Section */
+#intro {
+  padding-top: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+}
+
+
+/* Button Container Styling */
+#button-container {
+  position: relative;
+  top: 300px;                   /* Move the buttons down */
+  left: 0px;                 /* Move the buttons to the left */
+  text-align: center;
+}
+
+/* Button Styles */
+#button-container button {
+  font-size: 1.5rem;            /* Increase button font size */
+  padding: 15px 30px;           /* Larger padding for bigger buttons */
+  margin: 10px;                 /* Spacing between buttons */
+  cursor: pointer;
+  border-radius: 8px;           /* Rounded corners */
+  border: none;
+  color: white;
+  background-color: #007bff;    /* Button color */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+#button-container button:hover {
+  background-color: #0056b3;    /* Darker color on hover */
+}

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='extended_beauty.css') }}" />
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+    .center-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 70vh; /* Ocupa toda la altura de la pantalla */
+        margin: 0;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+</style>
+{% endblock %}
+{% block content %}
+<div class="center-wrapper">
+    <h3>No hay muestreos del plagas por el momento</h3>
+</div>
+{% endblock %}

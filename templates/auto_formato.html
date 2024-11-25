@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='Herbicida.css') }}" />
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+{% endblock %}
+
+{% block content %}
+<div id="button-container">
+    <button onclick="window.location.href='{{ url_for('main.fungicida')}}'">Fungicida</button>
+    <button onclick="window.location.href='{{ url_for('main.herbicida')}}'">Herbicida</button>
+    <button onclick="window.location.href='{{ url_for('main.insecticida')}}'">Insecticida</button>
+</div>
+{% endblock %}

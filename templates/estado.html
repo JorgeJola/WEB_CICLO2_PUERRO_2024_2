@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='estado.css') }}" />
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Centrado exclusivo para el contenido del bloque */
+    .content-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    #button-container {
+        width: 80%;
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 20px; /* Espacio entre botones e iframe */
+        padding: 10px 0;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    #iframe-container {
+        width: 80%;
+        height: 80vh;
+        position: relative;
+    }
+
+    #iframe-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="content-wrapper">
+    <div id="iframe-container">
+        <iframe 
+            title="HISTORIA COLORES" 
+            src="https://view.genially.com/673b77ba0b4a0f5679301d2c" 
+            allowfullscreen="true" 
+            scrolling="yes">
+        </iframe>
+    </div>
+    <div id="button-container">
+        <button onclick="window.location.href='{{ url_for('main.cultivo') }}'">Cultivo</button>
+        <button onclick="window.location.href='{{ url_for('main.enfermedades') }}'">Enfermedades</button>
+        <button onclick="window.location.href='{{ url_for('main.malezas') }}'">Malezas</button>
+        <button onclick="window.location.href='{{ url_for('main.plagas') }}'">Plagas</button>
+    </div>
+</div>
+{% endblock %}

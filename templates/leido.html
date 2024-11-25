@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Fungicida</title>
+</head>
+<body>
+    <h1>Formulario completado</h1>
+
+    <!-- Incrustar el PDF en el navegador -->
+    <object data="{{ pdf_url }}" type="application/pdf" width="100%" height="700px">
+        <p>Si no puedes ver el PDF, descarga <a href="{{ pdf_url }}">aquí</a>.</p>
+    </object>
+
+    <!-- Botón para descargar el archivo PDF -->
+    <br>
+    <a href="{{ pdf_url }}" download>
+        <button>Descargar PDF</button>
+    </a>
+</body>
+</html>

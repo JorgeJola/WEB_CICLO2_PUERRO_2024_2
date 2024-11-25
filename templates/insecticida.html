@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='extended_beauty.css') }}" />
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+{% endblock %}
+
+{% block content %}
+<div class="form-container">
+
+    <form action="{{ url_for('main.formulario_ins') }}" method="POST">
+        <!-- Campo para el nombre -->
+        <h4>Informacion de la solicitud</h4>
+        <label for="nombre">Nombre del solicitante:</label>
+        <select id="nombre" name="nombre">
+            <option value="Maria Berruecos">Maria Berruecos</option>
+            <option value="Javier Bustos">Javier Bustos</option>
+            <option value="Jorge Jola">Jorge Jola</option>
+            <option value="Natalia Melgarejo">Natalia Melgarejo</option>
+            <option value="Miguel Morales">Miguel Morales</option>
+        </select>
+
+        <!-- Campo para el correo electrónico -->
+        <label for="date_activity">Fecha actividad:</label>
+        <input type="date" id="date_activity" name="date_activity" required>
+        <br><br>
+        <h4>Informacion de la aplicación</h4>
+        <label for="Producto">Nombre del Producto:</label>
+        <select id="Producto" name="Producto">
+            <option value="Lathix">Lathix</option>
+            <option value="Evil">Evil</option>
+            <option value="Baboxa">Baboxa</option>
+            <option value="Sistoato">Sistoato</option>
+            <option value="Athrin">Athrin</option>
+            <option value="Ciromex">Ciromex</option>
+            <option value="Confidor">Confidor</option>
+            <option value="Exalt">Exalt</option>
+            <option value="Raudo">Raudo</option>
+            <option value="Insectoprid">Insectoprid</option>
+            <option value="Engeo">Engeo</option>
+            <option value="Pablanco">Pablanco</option>
+            <option value="Success">Success</option>
+            <option value="CapsiAlil">CapsiAlil</option>
+            <option value="Extracto de nim">Extracto de nim</option>
+            <option value="Coragen">Coragen</option>
+            <option value="Minecto Duo">Minecto Duo</option>
+            <option value="Dominex">Dominex</option>
+            <option value="Intrepid">Intrepid</option>
+            <option value="Larvin">Larvin</option>
+            <option value="Galeon">Galeon</option>
+            <option value="Hyperkill">Hyperkill</option>
+            <option value="Dantotsu">Dantotsu</option>
+            <option value="Lash">Lash</option>
+            <option value="Destello">Destello</option>
+            <option value="Karate Zeon">Karate Zeon</option>
+            <option value="Inveprid">Inveprid</option>
+            <option value="Dinastia">Dinastia</option>
+        </select>
+        <br><br>
+        <label for="Justificacion">Justificacion de la aplicación:</label>
+        <input type="text" id="Justificacion" name="Justificacion" required>
+        <br><br>
+        <label for="costo">Costo del producto ($):</label>
+        <input type="number" id="costo" name="costo" step="any" required>
+        <br><br>
+        <label for="tiempo_cal">Tiempo de calibración (Seg):</label>
+        <input type="number" id="tiempo_cal" name="tiempo_cal" step="any" required>
+        <br><br>
+        <label for="area_cal">Area de calibración (m2):</label>
+        <input type="number" id="area_cal" name="area_cal" step="any" required>
+        <br><br>
+        <label for="caudal">Caudal de la boquilla (ml/s):</label>
+        <input type="number" id="caudal" name="caudal" step="any" required>
+        <br><br>
+        <label for="dosis">Dosis por hectárea (L):</label>
+        <input type="number" id="dosis" name="dosis" step="any" required>
+        <br><br>
+        <label for="area">Área de aplicación:</label>
+        <select id="area" name="area">
+            <option value="Lote">Lote (3060 m2)</option>
+            <option value="Cultivo">Cultivo (2700 m2)</option>
+        </select>
+        <br><br>
+        <!-- Botón de envío -->
+        <button type="submit">Descargar PDF</button>
+    </form>
+</div>
+{% endblock %}

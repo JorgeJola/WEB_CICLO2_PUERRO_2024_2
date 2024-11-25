@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='extended_beauty.css') }}" />
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+{% endblock %}
+
+{% block content %}
+<div class="form-container">
+
+    <form action="{{ url_for('main.formulario_herb') }}" method="POST">
+        <!-- Campo para el nombre -->
+        <h4>Informacion de la solicitud</h4>
+        <label for="nombre">Nombre del solicitante:</label>
+        <select id="nombre" name="nombre">
+            <option value="Maria Berruecos">Maria Berruecos</option>
+            <option value="Javier Bustos">Javier Bustos</option>
+            <option value="Jorge Jola">Jorge Jola</option>
+            <option value="Natalia Melgarejo">Natalia Melgarejo</option>
+            <option value="Miguel Morales">Miguel Morales</option>
+        </select>
+
+        <!-- Campo para el correo electrónico -->
+        <label for="date_activity">Fecha actividad:</label>
+        <input type="date" id="date_activity" name="date_activity" required>
+        <br><br>
+        <h4>Informacion de la aplicación</h4>
+        <label for="Producto">Nombre del Producto:</label>
+        <select id="Producto" name="Producto">
+            <option value="Afalon">Afalon</option>
+            <option value="Sencor">Sencor</option>
+            <option value="Aminex">Aminex</option>
+            <option value="Linurex">Linurex</option>
+            <option value="Dublon gold">Dublon gold</option>
+            <option value="DualGold">DualGold</option>
+            <option value="Finale">Finale</option>
+            <option value="Masada">Masada</option>
+            <option value="Bentagran">Bentagran</option>
+            <option value="Fusilade">Fusilade</option>
+            <option value="Basagran">Basagran</option>
+            <option value="Select">Select</option>
+            <option value="Gramoxone">Gramoxone</option>
+            <option value="Emboscada">Emboscada</option>
+            <option value="Cutter">Cutter</option>
+            <option value="Glifosol">Glifosol</option>
+            <option value="Vendaval">Vendaval</option>
+            <option value="Roundup">Roundup</option>
+        </select>
+        <br><br>
+        <label for="Justificacion">Justificacion de la aplicación:</label>
+        <input type="text" id="Justificacion" name="Justificacion" required>
+        <br><br>
+        <label for="costo">Costo del producto ($):</label>
+        <input type="number" id="costo" name="costo" step="any" required>
+        <br><br>
+        <label for="tiempo_cal">Tiempo de calibración (Seg):</label>
+        <input type="number" id="tiempo_cal" name="tiempo_cal" step="any" required>
+        <br><br>
+        <label for="area_cal">Area de calibración (m2):</label>
+        <input type="number" id="area_cal" name="area_cal" step="any" required>
+        <br><br>
+        <label for="caudal">Caudal de la boquilla (ml/s):</label>
+        <input type="number" id="caudal" name="caudal" step="any" required>
+        <br><br>
+        <label for="dosis">Dosis por hectárea (L):</label>
+        <input type="number" id="dosis" name="dosis" step="any" required>
+        <br><br>
+        <label for="area">Área de aplicación:</label>
+        <select id="area" name="area">
+            <option value="Lote">Lote (3060 m2)</option>
+            <option value="Cultivo">Cultivo (2700 m2)</option>
+        </select>
+        <br><br>
+        <!-- Botón de envío -->
+        <button type="submit">Descargar PDF</button>
+    </form>
+</div>
+{% endblock %}
