@@ -151,7 +151,7 @@ def formulario_herb():
 
         # Rutas de archivo
         input_pdf_path = "FORMATO SOLICITUDES.pdf"
-        output_pdf_path = "venv_web_ciclo/static/formulario_rellenado.pdf"
+        output_pdf_path = "static/formulario_rellenado.pdf"
 
         # Ejecutar la función
         add_text_to_pdf(input_pdf_path, output_pdf_path, text_data, positions)
@@ -274,7 +274,7 @@ def formulario_fung():
 
         # Rutas de archivo
         input_pdf_path = "FORMATO SOLICITUDES.pdf"
-        output_pdf_path = "venv_web_ciclo/static/formulario_rellenado.pdf"
+        output_pdf_path = "static/formulario_rellenado.pdf"
 
         # Ejecutar la función
         add_text_to_pdf(input_pdf_path, output_pdf_path, text_data, positions)
@@ -285,7 +285,7 @@ def formulario_fung():
 @main.route('/leido')
 def leido():
     # Definir la ruta del archivo PDF
-    pdf_path = os.path.join('venv_web_ciclo/static/formulario_rellenado.pdf')
+    pdf_path = os.path.join('static/formulario_rellenado.pdf')
 
     # Verificar si el archivo existe
     if os.path.exists(pdf_path):
@@ -410,7 +410,7 @@ def formulario_ins():
 
         # Rutas de archivo
         input_pdf_path = "FORMATO SOLICITUDES.pdf"
-        output_pdf_path = "venv_web_ciclo/static/formulario_rellenado.pdf"
+        output_pdf_path = "static/formulario_rellenado.pdf"
 
         # Ejecutar la función
         add_text_to_pdf(input_pdf_path, output_pdf_path, text_data, positions)
